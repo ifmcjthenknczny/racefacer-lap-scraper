@@ -20,6 +20,8 @@
         "path": "./deno.lock",
         "frozen": true
       },
-      "nodeModulesDir": "auto"
+      "nodeModulesDir": "auto",
+      "compilerOptions": {
+        "target": "es2023"
+      }
   }
-  
