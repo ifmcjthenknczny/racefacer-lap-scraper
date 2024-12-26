@@ -3,7 +3,7 @@
       "include": ["src/"],
       "exclude": [],
       "rules": {
-        "exclude": ["no-unused-vars"]
+        "exclude": ["no-unused-vars", "no-explicit-any"]
       }
     },
     "fmt": {

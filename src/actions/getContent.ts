@@ -2,9 +2,6 @@ import { Day, toDay, toSeconds } from '../helpers';
 
 import { Page } from 'puppeteer';
 import { contentConfig } from '../config';
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 type PossibleTrack = {
 	id: string;
@@ -12,8 +9,8 @@ type PossibleTrack = {
 };
 
 type LapTimeByDate = {
-	date: Day;
-	lapTime: number;
+	date?: Day;
+	lapTime?: number;
 };
 
 type ResultData = Record<string, LapTimeByDate[]>;
@@ -44,20 +41,28 @@ async function getContentOfOneTrack(page: Page): Promise<LapTimeByDate[]> {
 			],
 		);
 
-		return lapTimesContainers.map((container) => ({
-			date: toDay(
-				container
-					?.closest(contentConfig.selectors.container)
-					?.querySelector(contentConfig.selectors.date)
-					?.innerText.trim(),
-			),
-			lapTime: toSeconds(
-				container.textContent
-					?.replaceAll('\n', '')
-					.replaceAll('\t', '')
-					.trim(),
-			),
-		}));
+		return lapTimesContainers.map((container) => {
+			const date = container
+				?.closest(contentConfig.selectors.container)
+				?.querySelector(contentConfig.selectors.date)
+				?.textContent?.trim();
+			const lapTime = container.textContent
+				?.replaceAll('\n', '')
+				.replaceAll('\t', '')
+				.trim();
+			return ({
+				date: date
+					? toDay(
+						date,
+					)
+					: undefined,
+				lapTime: lapTime
+					? toSeconds(
+						lapTime,
+					)
+					: undefined,
+			});
+		});
 	});
 
 	return lapTimesByDate;
@@ -74,7 +79,7 @@ async function getPossibleTracks(page: Page): Promise<PossibleTrack[]> {
 			...document.querySelectorAll(contentConfig.selectors.trackOption),
 		];
 
-		return tracksElements.map((track) => ({
+		return tracksElements.map((track: any) => ({
 			id: track.value,
 			name: track.textContent,
 		}));

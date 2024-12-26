@@ -1,4 +1,4 @@
-// in this file write all the selectors and urls that are needed to scrape stuff
+export const RESULT_DIRECTORY = `out/lap_times_${Date.now()}.txt`;
 
 export const loginConfig = {
 	url: 'https://www.racefacer.com/profile/sessions',
