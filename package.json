@@ -5,15 +5,13 @@
   "main": "src/app.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "deno src/app.ts",
+    "start": "deno --allow-all --env-file src/app.ts",
     "lint": "deno lint",
     "format": "deno fmt"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dayjs": "^1.11.13",
     "puppeteer": "^23.0.2"
-  },
-  "packageManager": "yarn@1.22.22"
+  }
 }

@@ -1,3 +1,3 @@
 import scrape from './scrape.ts';
 
-scrape();
+await scrape();

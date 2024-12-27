@@ -1,5 +1,5 @@
 import { Page } from 'puppeteer';
-import { loginConfig } from '../config';
+import { loginConfig } from '../config.ts';
 import process from 'node:process';
 
 export const login = async (page: Page): Promise<void> => {
@@ -9,7 +9,7 @@ export const login = async (page: Page): Promise<void> => {
 		await page.waitForSelector(loginConfig.selectors.usernameInput);
 		await page.type(
 			loginConfig.selectors.usernameInput,
-			process.env.USERNAME!,
+			process.env.EMAIL!,
 		);
 
 		await page.waitForSelector(loginConfig.selectors.passwordInput);

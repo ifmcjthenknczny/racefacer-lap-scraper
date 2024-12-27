@@ -1,7 +1,6 @@
 {
   "version": "4",
   "specifiers": {
-    "npm:dayjs@^1.11.13": "1.11.13",
     "npm:puppeteer@^23.0.2": "23.11.1_devtools-protocol@0.0.1367902"
   },
   "npm": {
@@ -149,9 +148,6 @@
     },
     "data-uri-to-buffer@6.0.2": {
       "integrity": "sha512-7hvf7/GW8e86rW0ptuwS3OcBGDjIi6SZva7hCyWC0yYry2cOPmLIjXAUHI6DK2HsnwJd9ifmt57i8eV2n4YNpw=="
-    },
-    "dayjs@1.11.13": {
-      "integrity": "sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg=="
     },
     "debug@4.4.0": {
       "integrity": "sha512-6WTZ/IxCY/T6BALoZHaE4ctp9xm+Z5kY/pzYaCHRFeyVhojxlrm+46y68HA6hr0TcwEssoxNiDEUJQjfPZ/RYA==",
@@ -553,7 +549,6 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
-        "npm:dayjs@^1.11.13",
         "npm:puppeteer@^23.0.2"
       ]
     }
