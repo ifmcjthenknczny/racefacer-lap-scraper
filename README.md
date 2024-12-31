@@ -1,4 +1,3 @@
-```markdown
 # Racefacer Lap Scraper
 
 ## Overview
@@ -62,7 +61,7 @@ The script will create an `out` directory in the project root if it doesn't alre
 - Scrapes lap time data for multiple tracks in chronological order. Time is expressed in seconds.
 - Saves data in JSON format for easy analysis.
 - Provides config file in case selectors change in the future.
-- Compatibile with ![](https://www.dropbox.com/scl/fi/rotncf1i3xcykktsbatbg/giphy.gif?rlkey=3go01a4o9gfxw4mffd1zpcx6t&st=qbv6bsk7&dl=0).
+- Compatibile with ![Microsoft Windows](https://s7.gifyu.com/images/SXSOA.gif).
 
 ## Contributing
 
@@ -76,4 +75,3 @@ This project is licensed under the MIT License.
 
 For questions or feedback, please reach out via GitHub.
 [ifmcjthenknczny](https://github.com/ifmcjthenknczny)
-```
