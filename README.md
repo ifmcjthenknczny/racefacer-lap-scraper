@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a Deno application designed to scrape lap time data from the Racefacer website. It automates the process of extracting session lap times for all available tracks with logging in. The data is then saved as JSON files for further use.
+This project is a Deno application designed to scrape lap time data from the Racefacer website using Puppeteer. It automates the process of extracting session lap times for all available tracks with logging in. The data is then saved as JSON files for further use.
 
 ## What you need to know - put briefly
 - Clone repo, install deno if you don't have it, install packages.
@@ -56,12 +56,12 @@ The script will create an `out` directory in the project root if it doesn't alre
 
 ## Features
 
-- Automated login to Racefacer using Puppeteer.
+- Automated login to Racefacer.
 - Bypasses cookie consent dialogs.
 - Scrapes lap time data for multiple tracks in chronological order. Time is expressed in seconds.
 - Saves data in JSON format for easy analysis.
 - Provides config file in case selectors change in the future.
-- Compatibile with <img src="https://s13.gifyu.com/images/SXSOe.gif" height="100" alt="Microsoft Windows.">
+- Compatibile with <img src="https://s7.gifyu.com/images/SXSyq.gif" height="24" alt="Microsoft Windows.">
 
 ## Contributing
 
