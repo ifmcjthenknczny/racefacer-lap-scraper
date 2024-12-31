@@ -70,7 +70,7 @@ Feel free to submit issues or pull requests if you find any bugs or want to add 
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License.
 
 ## Contact
 
