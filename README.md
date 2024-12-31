@@ -1,21 +1,30 @@
-# scrape-website-to-pdf
+```markdown
+# Racefacer Lap Scraper
+
 ## Overview
 
-This repository provides a Node.js script that automates the process of scraping web pages and saving their contents as PDF files. The script utilizes the Puppeteer library to interact with web pages, and the FS module to manage file operations. The primary function, scrapePagesToPdfs, orchestrates the scraping of multiple pages defined in the configuration file and saves them as PDFs in a specified directory.
+This project is a Deno application designed to scrape lap time data from the Racefacer website. It automates the process of extracting session lap times for all available tracks with logging in. The data is then saved as JSON files for further use.
+
+## What you need to know - put briefly
+- Clone repo, install deno if you don't have it, install packages.
+- Copy `.env_sample` file and rename it to `.env`. Put remaining envs - your credentials for logging in.
+- Run the code.
 
 ## Installation
+
 ### Prerequisites
 
-    Node.js (v14 or higher)
-    npm (v6 or higher)
+- Deno 2.1.4
+- npm (v6 or higher)
+- Deno
 
 ### Setup
 
 #### Clone the Repository:
 
 ```bash
-git clone <repository_url>
-cd <repository_directory>
+git clone https://github.com/ifmcjthenknczny/racefacer-lap-scraper
+cd racefacer-lap-scraper
 ```
 
 #### Install Dependencies:
@@ -23,41 +32,37 @@ cd <repository_directory>
 Run the following command to install all necessary dependencies:
 
 ```bash
-npm install
-```
-
-#### Configuration:
-
-Ensure that the config.js file is correctly set up with the following exports:
-
-    ROOT: The base URL for the pages to be scraped.
-    SUBPAGES: An array of page paths to be appended to the root URL.
-    SCRAPE_CSS_SELECTOR: The CSS selector used to ensure that the page content is fully loaded.
-    IGNORE_CSS_SELECTORS: An array of CSS selectors for elements to be removed from the page before saving it as a PDF.
-
-Example config.js:
-
-```javascript
-    export const ROOT = 'https://example.com';
-    export const SUBPAGES = ['page1', 'page2', 'page3'];
-    export const SCRAPE_CSS_SELECTOR = '#content';
-    export const IGNORE_CSS_SELECTORS = ['.ads', '.sidebar'];
+deno install --frozen=true
 ```
 
 ## Usage
+
+### Configuration
+
+Ensure that the `.env` file's envirormental variables for login `EMAIL` and `PASSWORD` are correctly set up.
+
 ### Running the Script
 
-To run the script and scrape the web pages as PDFs, execute the following command:
+To run the script and scrape the lap times, execute the following command:
 
 ```bash
 npm start
 ```
 
-This command will compile Typescript files to JS and run them.
+This command will transpile TypeScript files and run them.
 
 ### Output
 
-The script will create a pdf directory in the project root if it doesn't already exist. All generated PDF files will be saved in this directory with filenames corresponding to their page order.
+The script will create an `out` directory in the project root if it doesn't already exist. All generated JSON files containing the scrape results will be saved in this directory.
+
+## Features
+
+- Automated login to Racefacer using Puppeteer.
+- Bypasses cookie consent dialogs.
+- Scrapes lap time data for multiple tracks in chronological order. Time is expressed in seconds.
+- Saves data in JSON format for easy analysis.
+- Provides config file in case selectors change in the future.
+- Compatibile with ![](https://www.dropbox.com/scl/fi/rotncf1i3xcykktsbatbg/giphy.gif?rlkey=3go01a4o9gfxw4mffd1zpcx6t&st=qbv6bsk7&dl=0).
 
 ## Contributing
 
@@ -66,3 +71,9 @@ Feel free to submit issues or pull requests if you find any bugs or want to add 
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Contact
+
+For questions or feedback, please reach out via GitHub.
+[ifmcjthenknczny](https://github.com/ifmcjthenknczny)
+```
