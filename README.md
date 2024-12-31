@@ -61,7 +61,7 @@ The script will create an `out` directory in the project root if it doesn't alre
 - Scrapes lap time data for multiple tracks in chronological order. Time is expressed in seconds.
 - Saves data in JSON format for easy analysis.
 - Provides config file in case selectors change in the future.
-- Compatibile with <img src="https://s13.gifyu.com/images/SXSOe.gif" height="40" alt="Microsoft Windows.">
+- Compatibile with <img src="https://s13.gifyu.com/images/SXSOe.gif" height="100" alt="Microsoft Windows.">
 
 ## Contributing
 
